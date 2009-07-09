@@ -3,7 +3,7 @@ require 'spec/rake/verify_rcov'
 
 MANIFEST = FileList["History.txt", "Manifest.txt", "README.txt", "LICENSES.txt", "Rakefile",
   "*.erb", "bin/*", "generators/**/*", "lib/**/*", "spec/**/*.rb", "tasks/**/*.rake"]
-
+require 'rubygems'
 begin
   File.open("Manifest.txt", "w") {|f| MANIFEST.each {|n| f << "#{n}\n"} }
   require 'hoe'
